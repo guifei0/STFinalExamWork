@@ -1,0 +1,38 @@
+#nms{
+    width: 100%;
+}
+td{
+    text-align: center;
+    width: 12%;
+    height: 65px;
+    font-size: 20px;
+}
+.theme_body{
+    margin: 35px auto;
+}
+.pagecount{
+    text-align: center;
+}
+.pagecount span{
+    display: inline-block;
+    background: #ddd;
+    margin:0 0 0 5px;
+    width:95px;
+    text-align: center;
+    padding:2px 8px 2px 8px;
+    border:1px solid #eee;
+    color: #666;
+    font-size: 15px;
+}
+.pagecount span a{
+    color:#333;
+}
+.pagecount span a:hover{
+    cursor: pointer;
+    color: #059fe5;
+}
+.delete{
+    width: 12%;
+    height: 45px;
+    font-size: 18px;
+}

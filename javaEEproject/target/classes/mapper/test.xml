@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.mapper.TestMapper">
+
+    <select id="selectAllTest" resultType="com.java.model.Test">
+        select * from test order by test_id desc
+    </select>
+    <select id="selectTest" parameterType="int" resultType="com.java.model.Test">
+        select * from test where test_id=#{testid}
+    </select>
+    <select id="selectxzQuestionByTest" parameterType="int" resultType="com.java.model.Question">
+        select * from question where question_test=#{testid} and question_type=1
+    </select>
+    <select id="selectpdQuestionByTest" parameterType="int" resultType="com.java.model.Question">
+        select * from question where question_test=#{testid} and question_type=2
+    </select>
+    <select id="selectcxQuestionByTest" parameterType="int" resultType="com.java.model.Question">
+        select * from question where question_test=#{testid} and question_type=3
+    </select>
+    <select id="selectQuestionByTest" parameterType="int" resultType="com.java.model.Question">
+        select * from question where question_test=#{testid}
+    </select>
+    <select id="selectScoreByType" parameterType="int" resultType="int">
+        select score from questiontype where qtid=(select question_type from question where question_id=#{qid})
+    </select>
+    <select id="selectRightAns" parameterType="int" resultType="String">
+        select question_rightans from question where question_id=#{qid};
+    </select>
+    <delete id="deleteTest" parameterType="int">
+        delete from test where test_id=#{testid}
+    </delete>
+    <insert id="addQuestion" parameterType="com.java.model.Question">
+        insert into question (question_content,question_Aans,question_Bans,question_Cans,question_Dans,question_rightans,question_type)
+        values (#{question_content},#{question_Aans},#{question_Bans},#{question_Cans},#{question_Dans},#{question_rightans},#{question_type});
+    </insert>
+    <update id="changeTestName" parameterType="com.java.model.Test">
+        update test set test_name=#{test_name} where test_id=#{test_id}
+    </update>
+    <update id="changeTestTime" parameterType="com.java.model.Test">
+        update test set test_time=#{test_time} where test_id=#{test_id}
+    </update>
+    <update id="changeQuestionAns" parameterType="com.java.model.Question">
+        update question set question_rightans=#{question_rightans} where question_id=#{question_id}
+    </update>
+    <delete id="deleteQuestion" parameterType="int">-- 设置question_test=0
+        update question set question_test=0 where question_id=#{qid}
+    </delete>
+</mapper>

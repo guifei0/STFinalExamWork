@@ -1,0 +1,68 @@
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background-color: #f7f7f7;
+        /*background: url("../img/bac.jpg") no-repeat;
+        background-size: cover;*/
+      }
+      .top{
+        margin-top: 120px;
+      }
+      .div-left{
+        width: 200px;
+        margin: 150px auto;
+      }
+      img{
+        width: 100px;
+        height: 100px;
+        margin-left: 100px;
+        margin-bottom: 20px;
+      }
+      .title{
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .div-right{
+        background-color: #ffffff;
+        width: 350px;
+        padding: 0 25px 25px 25px;
+        margin: 30px auto;
+        border-style: solid;
+        border-width: 0.8px;
+        border-radius: 5px;
+        border-color: #dddddd;
+      }
+      .mybtn{
+        width: 100px;
+        margin-left: 100px;
+        margin-top: 15px;
+      }
+      .a-get{
+        font-size: 10px;
+      }
+      .la-a-get{
+        margin-top: 10px;
+        margin-left: 210px;
+      }
+      .foot{
+        margin: 160px auto 0;
+        text-align: center;
+        color: #d0d0d0;
+      }
+      .error{
+        color: red;
+      }
+      .verifi{
+        width: 60px;
+        height: 30px;
+        position: relative;
+        right: 0px;
+      }
+      label{
+        margin: 5px;
+      }
+      #user,#admin{
+        margin-left: 60px;
+      }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.JavaEEProject.mapper.UserMapper">
+
+    <resultMap id="userResult" type="com.JavaEEProject.model.User">
+        <id column="user_id" property="userId"></id>
+        <result column="user_name" property="userName"></result>
+        <result column="user_password" property="userPassword"></result>
+        <result column="user_postbox" property="userPostbox"></result>
+        <result column="user_phone" property="userPhone"></result>
+        <result column="user_wish" property="userWish"></result>
+        <result column="user_type" property="userType"></result>
+    </resultMap>
+
+    <select id="selectUser" parameterType="int" resultMap="userResult">
+        select user_id ,user_name,user_password ,user_phone,user_postbox,user_wish,user_type from userinfo where user_id=#{userId}
+   </select>
+    <select id="selectAll" resultMap="userResult">
+        select * from userinfo
+    </select>
+    <insert id="insertUser" parameterType="com.JavaEEProject.model.User">
+        insert into userinfo(user_name,user_password,user_postbox,user_type) values (#{userName},#{userPassword},#{userPostbox},#{userType})
+    </insert>
+    <delete id="deleteUser" parameterType="int">
+        delete from userinfo where user_id=#{userId}
+    </delete>
+    <update id="changeUser" parameterType="com.JavaEEProject.model.User">
+    update userinfo set user_name=#{userName},user_password=#{userPassword},user_phone=#{userPhone},
+    user_postbox=#{userPostbox},user_phone=#{userPhone},user_wish=#{userWish} where user_id=#{userId}
+    </update>
+    <update id="changeWish" parameterType="com.JavaEEProject.model.User">
+        update userinfo set user_wish=#{userWish} where user_id=#{userId}
+    </update>
+</mapper>

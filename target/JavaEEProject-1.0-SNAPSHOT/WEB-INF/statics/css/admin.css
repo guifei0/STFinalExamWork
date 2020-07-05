@@ -1,0 +1,168 @@
+body{
+	font-family: kreon;
+    font-weight: 300;
+    color: #333;
+    background: #f5f5f5;
+    margin: 0px;
+    padding: 0px;
+}
+.nav{
+	width: 100%;
+	height: 50px;
+	background-color: #059fe5;
+}
+#home{
+	width: 48px;
+	height: 50px;
+	float: left;
+}
+#adminBoard{
+	width: 100px;
+	height: 50px;
+	font-size: 15px;
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	color: white;
+	float: left;
+}
+.adminer{
+	float: right;
+}
+.adminer ul{
+	width: 400px;
+	height: 50px;
+	font-size: 15px;
+}
+.adminer ul li{
+	width: 200px;
+	height: 50px;
+	list-style: none;
+	font-size: 23px;
+	line-height: 50px;
+	text-align: center;
+	padding: 0px;
+	margin: 0;
+	float: left;
+	display: block;
+	color: white;
+}
+.adminer ul li a{
+	text-decoration: none;
+	color: white;
+	font-size: 23px;
+}
+
+.adminer ul li a:hover{
+	cursor: pointer;
+	color: #0371a4;
+}
+.main{
+	width: 100%;
+	height:500px;
+}
+/*.leftMain{*/
+	/*width: 9.5%;*/
+	/*height: 100%;*/
+	/*bottom: 0;*/
+    /*top: 50px;*/
+    /*z-index: 100;*/
+    /*position: fixed;*/
+    /*background-color: #293038;*/
+/*}*/
+.rightMain{
+	float: right;
+	width: 100%;
+	/* height: 500px; */
+	/* background-color: #0371a4 */
+}
+.containerHeader{
+	width: 95%;
+	margin: 15px auto;
+	height: 50px;
+	/* background-color: #0371a4; */
+	border-bottom: solid 1px #80808036;
+}
+.containhead{
+	width: 10%;
+	height: 45px;
+	font-size: 25px;
+	text-align: center;
+	line-height: 45px;
+	border-left: #0371a4 solid 2px;
+}
+.containMain{
+	width: 95%;
+	margin: 15px auto;
+	height: 225px;
+	border-bottom: solid 1px #80808036;
+}
+.containMainUser{
+	width: 100%;
+	height: 180px;
+	margin-bottom: 50px;
+}
+.containUserPic{
+	width: 18%;
+	height: 180px;
+	text-align: center;
+	float: left;
+}
+.containMainUser img{
+	margin-top:15px;
+	height: 150px;
+}
+.containUserFrom{
+	width: 35%;
+	height: 180px;
+	float: left;
+	margin-left: 20px;
+}
+.containUserFrom span{
+	width: 100%;
+	height: 30%;
+	line-height: 60px;
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+}
+.containMainGroup{
+	width: 100%;
+	height: 70px;
+	margin-top:25px;
+	border-bottom: solid 1px #80808036;
+}
+.groupHeader{
+	width: 15%;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	float: left;
+}
+.groupHeader span{
+	font-size: 15px;
+}
+.groupMain{
+	width: 65%;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	float: left;
+}
+.groupMain span{
+	font-size: 15px;
+}
+.groupChange{
+	width: 10%;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	float: right;
+}
+.groupChange a{
+	font-size: 17px;
+}
+.groupChange a:hover{
+	color: #059fe5;
+	cursor: pointer;
+}
